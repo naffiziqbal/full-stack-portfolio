@@ -10,11 +10,10 @@ import "react-photo-view/dist/react-photo-view.css";
 const BestWork = () => {
   const [data, setData] = useState([]);
   useEffect(() => {
-    fetch("./public/works.json")
+    fetch("https://portfolio-works-naffiziqbal.vercel.app/works")
       .then((res) => res.json())
       .then((data) => setData(data));
   }, []);
-  console.log(data);
 
   return (
     <div className="p-5 container mx-auto">
