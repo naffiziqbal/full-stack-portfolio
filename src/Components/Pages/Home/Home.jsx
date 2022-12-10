@@ -1,12 +1,14 @@
-
 import React from "react";
+import About from "./Sections/About";
 import Banners from "./Sections/Banners";
+import Skills from "./Sections/Skills";
 const Home = () => {
   // const
   return (
-
-    <div>
-      <Banners/>
+    <div className="">
+      <Banners />
+      <About />
+      <Skills/>
     </div>
   );
 };
