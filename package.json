@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.10.0",
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
     "@fortawesome/fontawesome-svg-core": "^6.2.1",
@@ -21,6 +22,7 @@
     "aos": "^2.3.4",
     "babel-plugin-macros": "^3.1.0",
     "daisyui": "^2.43.0",
+    "firebase": "^9.15.0",
     "react": "^18.2.0",
     "react-animate-on-scroll": "^2.1.5",
     "react-dom": "^18.2.0",
