@@ -28,6 +28,7 @@
     "react-dom": "^18.2.0",
     "react-photo-view": "^1.2.3",
     "react-router-dom": "^6.4.4",
+    "sweetalert2": "^11.6.15",
     "swiper": "^8.4.5",
     "typewriter-effect": "^2.19.0"
   },

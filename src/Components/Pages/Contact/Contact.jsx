@@ -1,8 +1,9 @@
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
+import Swal from "sweetalert2";
 
 const Contact = () => {
-    const form = useRef();
+  const form = useRef();
   const handleForm = (e) => {
     e.preventDefault();
     emailjs
@@ -14,13 +15,20 @@ const Contact = () => {
       )
       .then(
         (result) => {
+          Swal.fire({
+            position: "top-middle",
+            icon: "success",
+            title: "Your Mail has been sent",
+            showConfirmButton: false,
+            timer: 1500,
+          });
           console.log(result.text);
         },
         (error) => {
           console.log(error.text);
         }
       );
-      e.target.reset()
+    e.target.reset();
   };
   return (
     <div className="container mx-auto">
@@ -28,7 +36,12 @@ const Contact = () => {
         Contact Now
       </p>
       <div className="shadow-2xl my-5 p-5 rounded-lg">
-        <form ref={form}  action="#" className=" max-w-lg mx-auto" onSubmit={handleForm}>
+        <form
+          ref={form}
+          action="#"
+          className=" max-w-lg mx-auto"
+          onSubmit={handleForm}
+        >
           <div className="form-control ">
             <label>
               {" "}
