@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import "swiper/css";
-import "swiper/css/scrollbar";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 import { Scrollbar } from "swiper";
+import { Keyboard, Pagination, Navigation } from "swiper";
 import { PhotoProvider, PhotoView } from "react-photo-view";
 import "react-photo-view/dist/react-photo-view.css";
 
@@ -18,10 +19,49 @@ const BestWork = () => {
 
   return (
     <div className="p-5 container mx-auto">
-      <h3 className="text-4xl font-semibold text-center  text-primary">
+      <h3 className="text-4xl font-semibold text-center  text-primary mb-12">
         My Best Work
       </h3>
-      <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-5">
+      <Swiper
+        slidesPerView={1}
+        spaceBetween={30}
+        keyboard={{
+          enabled: true,
+        }}
+        pagination={{
+          clickable: true,
+        }}
+        navigation={true}
+        modules={[Keyboard, Pagination, Navigation]}
+        className="mySwiper"
+      >
+        {" "}
+        {data.map((data) => (
+          <SwiperSlide>
+            <div key={data.id} className="card  bg-base-100 shadow-xl">
+              <figure>
+                <PhotoProvider>
+                  <PhotoView src={data.Img}>
+                    <img className="max-w-lg" src={data.Img} alt="" />
+                  </PhotoView>
+                </PhotoProvider>
+              </figure>
+              <div className="card-body">
+                <h2 className="card-title">{data.name}</h2>
+                <p>{data.description}</p>
+                <div className="card-actions justify-end">
+                  <button className="btn btn-xs btn-primary text-white">
+                    <a target={"_blank"} href={data.link}>
+                      visit
+                    </a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+      {/* <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-5">
         {data.map((data) => (
           <div key={data.id} className="card  bg-base-100 shadow-xl">
             <figure>
@@ -35,7 +75,7 @@ const BestWork = () => {
               <h2 className="card-title">{data.name}</h2>
               <p>{data.description}</p>
               <div className="card-actions justify-end">
-                <button>
+                <button className="btn btn-xs btn-primary text-white">
                   <a target={"_blank"} href={data.link}>
                     visit
                   </a>
@@ -44,7 +84,7 @@ const BestWork = () => {
             </div>
           </div>
         ))}
-      </div>
+      </div> */}
     </div>
   );
 };
