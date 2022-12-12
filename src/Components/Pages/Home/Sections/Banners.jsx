@@ -1,4 +1,4 @@
-import bg from '../../../../assest/cool-background.png'
+import bg from "../../../../assest/cool-background.png";
 import React from "react";
 import Typewriter from "typewriter-effect";
 import bannerImg from "../../../../assest/bannerImg.svg";
@@ -6,7 +6,10 @@ import "./Banner.css";
 
 const Banners = () => {
   return (
-    <div className="p-5 sm:text-center bg-black" style={{background : `url(${bg})`}}>
+    <div
+      className="p-5 sm:text-center bg-slate-800"
+      style={{ background: `url(${bg})`, opacity: "0.7" }}
+    >
       <div className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 justify-center items-center">
           <div>
