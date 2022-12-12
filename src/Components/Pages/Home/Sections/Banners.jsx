@@ -29,8 +29,8 @@ const Banners = () => {
         </div>
         <div className="social_section pt-24">
           <p className="font-thin text-xl mb-12">Explore More</p>
-          <a target={"_blank"} href="https://www.facebook.com/naffiiziiqbal">
-            <i className="social_icons fa-brands fa-facebook-f"></i>
+          <a target={"_blank"} href="https://github.com/naffiziqbal">
+            <i className="social_icons fa-brands fa-github"></i>
           </a>
 
           <a target={"_blank"} href="https://linkedin.com/in/naffiziqbal">
@@ -38,8 +38,8 @@ const Banners = () => {
             <i className="social_icons fa-brands fa-linkedin-in"></i>
           </a>
 
-          <a href="https://instagram.com/naffiziqbal" target={"_blank"}>
-            <i className="social_icons fa-brands fa-instagram"></i>
+          <a href="https://twitter.com/NaffizIqbal" target={"_blank"}>
+            <i className="social_icons fa-brands fa-twitter"></i>
           </a>
         </div>
       </div>
