@@ -11,7 +11,7 @@ const About = () => {
   const name = "Nafiz Iqbal";
   const [projects, setProjects] = useState([]);
   useEffect(() => {
-    fetch(`http://localhost:5000/allworks`)
+    fetch(`https://portfolio-works-naffiziqbal.vercel.app/allworks`)
       .then((res) => res.json())
       .then((data) => setProjects(data));
   }, []);
