@@ -27,19 +27,19 @@ const Skills = () => {
           </span>
           <span className="animate-pulse">
             <img src={tailwindSvg} alt="" />
-            <p>HTML</p>
+            <p>Tailwind CSS</p>
           </span>
           <span className="animate-pulse">
             <img src={jsSvg} alt="" />
-            <p>HTML</p>
+            <p>Javascript</p>
           </span>
           <span className="animate-pulse">
             <img src={nodeSvg} alt="" />
-            <p>HTML</p>
+            <p>Node Js</p>
           </span>
           <span className="animate-pulse">
             <img src={firebasSvg} alt="" />
-            <p>HTML</p>
+            <p>Firebase</p>
           </span>
         </div>
       </ScrollAnimation>
