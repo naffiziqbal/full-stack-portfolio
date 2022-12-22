@@ -9,12 +9,12 @@ import { Keyboard, Pagination, Navigation } from "swiper";
 import { useEffect } from "react";
 
 const AllWorks = () => {
-    const [projects, setProjects] = useState([]);
-    useEffect(() => {
-      fetch(`https://portfolio-works-naffiziqbal.vercel.app/allworks`)
-        .then((res) => res.json())
-        .then((data) => setProjects(data));
-    }, []);
+  const [projects, setProjects] = useState([]);
+  useEffect(() => {
+    fetch(`https://portfolio-works-naffiziqbal.vercel.app/allworks`)
+      .then((res) => res.json())
+      .then((data) => setProjects(data));
+  }, []);
   return (
     <div>
       <div className="myWorks">
@@ -46,7 +46,15 @@ const AllWorks = () => {
                     </PhotoProvider>
                   </figure>
                   <div className="card-body">
-                    <h2 className="card-title">{project.name}</h2>
+                    <h2 className="card-title">
+                      <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {project.name}
+                      </a>
+                    </h2>
                     <p>{project.description}</p>
                     <div className="card-actions justify-end">
                       <button className="btn btn-xs btn-primary text-white">
@@ -61,7 +69,7 @@ const AllWorks = () => {
             ))}
           </Swiper>
         </div>
-      </div> 
+      </div>
     </div>
   );
 };

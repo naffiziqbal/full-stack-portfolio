@@ -6,6 +6,7 @@ import "swiper/css/navigation";
 import { Keyboard, Pagination, Navigation } from "swiper";
 import { PhotoProvider, PhotoView } from "react-photo-view";
 import "react-photo-view/dist/react-photo-view.css";
+import { Link } from "react-router-dom";
 
 const BestWork = () => {
   const [data, setData] = useState([]);
@@ -45,14 +46,19 @@ const BestWork = () => {
                 </PhotoProvider>
               </figure>
               <div className="card-body">
-                <h2 className="card-title">{data.name}</h2>
+                <h2 className="card-title">
+                  <a href={data.link} target="_blank" rel="noopener noreferrer">
+                    {data.name}
+                  </a>
+                </h2>
                 <p>{data.description}</p>
                 <div className="card-actions justify-end">
-                  <button className="btn btn-xs btn-primary text-white">
-                    <a target={"_blank"} href={data.link}>
-                      visit
-                    </a>
-                  </button>
+                  <Link
+                    to={"/allworks"}
+                    className=" bg-primary rounded-full btn btn-xs"
+                  >
+                    See my All Works
+                  </Link>
                 </div>
               </div>
             </div>
