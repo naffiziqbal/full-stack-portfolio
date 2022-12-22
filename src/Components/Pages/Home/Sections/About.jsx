@@ -28,7 +28,8 @@ const About = () => {
           </p>
         </div>
       </div>
-      <hr className=" container mx-auto border-[#ba68c8]"
+      <hr
+        className=" container mx-auto border-[#ba68c8]"
         style={{
           height: 5,
         }}

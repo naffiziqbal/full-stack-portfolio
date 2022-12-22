@@ -31,7 +31,7 @@ const Contact = () => {
     e.target.reset();
   };
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto" id="contact">
       <p className="text-4xl text-primary text-center font-semibold">
         Contact Now
       </p>
