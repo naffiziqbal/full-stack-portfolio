@@ -5,4 +5,4 @@ This is the Version 2 of this website. Previously this website was read-only web
 
 
 ### Link ###
-`https://nafiziqbal.com`
+`https://www.nafiziqbal.com`
